@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion";
-import styles from "./ContactList.module.css";
 
 const ContactList = ({ contacts, deleteContact }) => {
   return (
@@ -25,7 +24,7 @@ const ContactList = ({ contacts, deleteContact }) => {
             key={contact.id}
           >
             {contact.name}: {contact.number}
-            <div className={styles.actions}>
+            <div>
               <button type="button" onClick={() => deleteContact(contact.id)}>
                 Delete
               </button>
